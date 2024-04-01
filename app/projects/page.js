@@ -4,11 +4,12 @@ import ImageLoader from '../components/ImageLoader'
 
 const Projects = () => {
   const projects = [
-    {title: 'Dat Ecosystem', desc: 'Figma to standard.js project in which I vanilla javascript and css to dynamically develop the frontend', link:'https://mehrabbruno.github.io/dat-ecosystem/', techs : ['html', 'css', 'js'] },
-    {title: 'Rolling Ball', desc: 'Fun project in which I used three.js to code a HD 3D game', link:'https://alilo8.github.io/runner/',  techs : ['html', 'css', 'js'] },
-    {title: 'Colloquium Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : []},
-    {title: 'NFT Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : []},
-    {title: 'Slydit Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to HTML freelance project which build using HTML and pure CSS with cool animations Code is private can show if you want to check', techs : []},
+    {title: 'Dat Ecosystem', desc: 'Figma to standard.js project in which I vanilla javascript and css to dynamically develop the frontend', link:'https://dat-ecosystem.org/', techs : ['html', 'css', 'js'] },
+    {title: 'Rolling Ball', desc: 'Fun project in which I used three.js to code a HD 3D game', link:'https://alyhxn.github.io/runner/',  techs : ['html', 'css', 'js', 'threejs'] },
+    {title: '3D Path Planning', desc: 'Developed a new path planning algorithm after 6 months of research and testing', link:'https://alyhxn.github.io/3D-Path-Planning/',  techs : ['html', 'css', 'js', 'threejs'] },
+    {title: 'X-Recruiter', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://x-recruiter.vercel.app/',  techs : ['html', 'css', 'js'] },
+    {title: 'Venturize Production', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://venturize-production.netlify.app/',  techs : ['html', 'css', 'js'] },
+    {title: 'Colloquium Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : ['html', 'css', 'js', 'react']},
   ]
   const project_count = projects.length/3;
   const ceil = Math.ceil(project_count);
@@ -19,27 +20,27 @@ const Projects = () => {
     projects.slice(round + ceil, projects.length)
   ]
   return (
-    <main className='max-w-[1600px] m-auto p-24 fade-in'>
-      <section className="flex items-center justify-between gap-10 mb-10">
-          <ImageLoader className='rounded-md aspect-square object-cover bg-gradient-to-r from-cyan-400 to-pink-400' src="/laptop.jpg" alt='projects' width={300} height={300} />
+    <main className='max-w-1600 m-auto p-96 fade-in'>
+      <section className="flex items-center justify-between gap-40 pb-40 m-auto max-w-1200">
+          <ImageLoader className='rounded-6 img-common' src="/laptop.jpg" alt='projects' width={300} height={300} />
         <div>
-          <h1 className='font-bold text-5xl pb-10 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent'>Work, Freelance, and Hobby</h1>
-          <div className='text-gray-400 leading-loose'>I am a self-taught frontend web developer with a keen interest in AI. My knowledge in frontend development has been acquired through online courses, blog readings, and hands-on application to various projects during my free time. I have delved into the intricacies of the frontend development process, grasped essential concepts, and explored theoretical foundations. Additionally, my enthusiasm for the AI revolution fuels my passion for staying informed and engaged in this dynamic field.</div>
+          <h1 className='font-bold font-48 pb-40 text-gradient bg-gradient-3'>Work, Freelance, and Hobby</h1>
+          <div className='color-2 line-height-2'>I am a self-taught frontend web developer with a keen interest in AI. My knowledge in frontend development has been acquired through online courses, blog readings, and hands-on application to various projects during my free time. I have delved into the intricacies of the frontend development process, grasped essential concepts, and explored theoretical foundations. Additionally, my enthusiasm for the AI revolution fuels my passion for staying informed and engaged in this dynamic field.</div>
         </div>
       </section>
-      <section className='grid grid-cols-3 gap-4 justify-center'>
+      <section className='grid grid-cols-3 justify-center overflow-hidden relative'>
         {project_groups.map(project_group => (
-          <div key={Math.random()} className='grid gap-4'>
+          <div key={Math.random()} className='grid'>
             {project_group.map(project => (  
-              <div className='border border-cyan-950 p-6 rounded-md bg-gradient-to-r from-black to-gray-950' key={Math.random()}>
-                <div className='flex justify-between pb-2'>
-                  <h2 className='text-xl'>{project.title}</h2>
+              <div className='project-card p-24' key={Math.random()}>
+                <div className='flex justify-between pb-8'>
+                  <h2 className='font-20'>{project.title}</h2>
                   <a target='_blank' href={project.link}>
                     <Image src="/outlink.svg" alt='outlink' width={20} height={20} />
                   </a>
                 </div>
-                <div className='text-gray-400 pb-4'>{project.desc}</div>
-                <div className='flex gap-5'>
+                <div className='color-1 pb-16'>{project.desc}</div>
+                <div className='flex gap-10'>
                   {project.techs.map(tech => (
                     <Image key={tech} className='opacity-30 hover:opacity-100 cursor-pointer' src={`/${tech}.svg`} title={tech} alt={tech} width={20} height={20} />
                   ))}
@@ -49,6 +50,7 @@ const Projects = () => {
             }
           </div>
         ))}
+        <div className='bg-project'></div>
       </section>
     </main>
   )
