@@ -453,4 +453,7 @@ input{
   .grid-cols-3{
     grid-template-columns: 1fr;
   }
+  .p-96{
+    padding: 24px;
+  }
 }
