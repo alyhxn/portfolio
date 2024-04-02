@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from './components/Navbar'
 import Search from './components/Search'
 import { ContextProvider } from './ContextProvider'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,11 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col justify-between`}>
         <ContextProvider>
           <Navbar />
           <Search />
           {children}
+          <Footer />
         </ContextProvider>
       </body>
     </html>

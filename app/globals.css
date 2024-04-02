@@ -24,6 +24,7 @@
 body{
   font-family: var(--font-family-1);
   background-color: black;
+  min-height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -72,7 +73,7 @@ input{
   aspect-ratio: 1/1;
 }
 .btn-unique{
-  margin: 24px 0 0 -20px;
+  margin-left: -20px;
   gap: 4px;
   width: fit-content;
 }
@@ -82,6 +83,19 @@ input{
 .btn-hover:hover{
   color: var(--color-1);
   background-color: var(--bg-color-2);
+}
+.link-hover{
+  transition: color .5s ease;
+}
+.link-hover > img{
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.link-hover:hover{
+  color: var(--color-1);
+}
+.link-hover:hover > img{
+  opacity: 1;
 }
 .search-overlay{
   transform: translateX(100%);
@@ -102,7 +116,7 @@ input{
   backdrop-filter: blur(16px);
   border-radius: 8px;
   background-color: rgb(var(--color-3) / 0.25);
-  transition: transform .3s ease, max-height .5s ease;
+  transition: transform .1s ease, max-height .3s ease;
   overflow: hidden;
   transform: scaleY(0);
 }
@@ -195,11 +209,20 @@ input{
 .grid-cols-3{
   grid-template-columns: 1fr 1fr 1fr;
 }
+.flex-col{
+  flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
 .items-center{
   align-items: center;
 }
 .justify-between{
   justify-content: space-between;
+}
+.justify-around{
+  justify-content: space-around;
 }
 .justify-center{
   justify-content: center;
@@ -208,7 +231,7 @@ input{
   overflow: hidden;
 }
 .m-auto{
-  margin: auto;
+  margin: 0 auto;
 }
 .p-8{
   padding: 8px;
@@ -260,6 +283,9 @@ input{
 .pb-40{
   padding-bottom: 40px;
 }
+.pt-24{
+  padding-top: 24px;
+}
 .border-top-1{
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -286,6 +312,9 @@ input{
 }
 .w-full{
   width: 100%;
+}
+.w-fit{
+  width: fit-content;
 }
 .w-screen{
   width: 100vw;
@@ -355,7 +384,7 @@ input{
   background-color: var(--bg-color-3);
 }
 .bg-gradient-1{
-  background-image: linear-gradient(to right, var(--color-blue), var(--color-purple));
+  background-image: linear-gradient(to right, var(--color-blue), var(--color-1));
 }
 .bg-gradient-2{
   background-image: linear-gradient(to right, var(--color-blue), var(--color-pink));
@@ -389,4 +418,39 @@ input{
 }
 .brightness-7{
   filter: brightness(0.7);
+}
+
+
+
+
+
+
+@media (max-width: 910px) {
+  .md-flex-col{
+    flex-direction: column;
+  }
+  .p-96{
+    padding: 48px;
+  }
+  .grid-cols-3{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 464px) {
+  .sm-flex-col{
+    flex-direction: column;
+  }
+  .sm-order-1{
+    order: 1;
+  }
+  .sm-hide{
+    display: none;
+  }
+  .link-hover > img{
+    opacity: 1;
+  }
+  .grid-cols-3{
+    grid-template-columns: 1fr;
+  }
 }

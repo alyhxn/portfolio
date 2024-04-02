@@ -4,7 +4,7 @@ import ImageLoader from '../components/ImageLoader'
 const About = () => {
   return (
     <main className='max-w-1600 m-auto p-96 fade-in'>
-      <section className="flex items-center justify-center gap-40 pb-40 max-w-1200 m-auto">
+      <section className="flex md-flex-col items-center justify-center gap-40 pb-40 max-w-1200 m-auto">
           <ImageLoader className='rounded-6 img-common' src="/best.jpeg" alt='projects' width={300} height={300} />
         <div>
           <h1 className='font-bold font-48 pb-40 text-gradient bg-gradient-4'>Simple and Optimistic</h1>

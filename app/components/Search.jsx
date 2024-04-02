@@ -23,8 +23,8 @@ const result = [
     items: [
       {title: 'Linkedin', link: 'https://www.linkedin.com/in/alyhxn/', icon: '/linkedin.svg'},
       {title: 'Github', link: '/https://github.com/alyhxn', icon: '/github.svg'},
-      {title: 'Facebook', link: '/contact', icon: ''},
-      {title: 'Instagram', link: '/about', icon: ''}
+      {title: 'Facebook', link: 'https://www.facebook.com/alihassan8812/', icon: '/facebook.svg'},
+      {title: 'Instagram', link: 'https://www.instagram.com/hassanali8812/', icon: '/instagram.svg'}
     ]
 
   }

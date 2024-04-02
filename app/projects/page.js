@@ -1,5 +1,6 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageLoader from '../components/ImageLoader'
 
 const Projects = () => {
@@ -11,25 +12,35 @@ const Projects = () => {
     {title: 'Venturize Production', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://venturize-production.netlify.app/',  techs : ['html', 'css', 'js'] },
     {title: 'Colloquium Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : ['html', 'css', 'js', 'react']},
   ]
-  const project_count = projects.length/3;
-  const ceil = Math.ceil(project_count);
-  const round = Math.round(project_count)
-  const project_groups = [
-    projects.slice(0, ceil),
-    projects.slice(ceil, round + ceil),
-    projects.slice(round + ceil, projects.length)
-  ]
+  const [projectGroups, setProjectGroups] = useState([])
+  useEffect(() => {
+    let divident = 3
+    if(window.innerWidth < 910)
+      divident = 2
+    const project_count = projects.length/divident;
+    const ceil = Math.ceil(project_count);
+    const round = Math.round(project_count)
+    setProjectGroups([
+      projects.slice(0, ceil),
+      projects.slice(ceil, round + ceil),
+      projects.slice(round + ceil, projects.length)
+    ])
+  
+    return
+  }, [])
+  
+  
   return (
     <main className='max-w-1600 m-auto p-96 fade-in'>
-      <section className="flex items-center justify-between gap-40 pb-40 m-auto max-w-1200">
+      <section className="flex md-flex-col items-center justify-between gap-40 pb-40 m-auto max-w-1200">
           <ImageLoader className='rounded-6 img-common' src="/laptop.jpg" alt='projects' width={300} height={300} />
         <div>
           <h1 className='font-bold font-48 pb-40 text-gradient bg-gradient-3'>Work, Freelance, and Hobby</h1>
-          <div className='color-2 line-height-2'>I am a self-taught frontend web developer with a keen interest in AI. My knowledge in frontend development has been acquired through online courses, blog readings, and hands-on application to various projects during my free time. I have delved into the intricacies of the frontend development process, grasped essential concepts, and explored theoretical foundations. Additionally, my enthusiasm for the AI revolution fuels my passion for staying informed and engaged in this dynamic field.</div>
+          <div className='color-2 line-height-2'>Life is meaningless without projects. I like to keep all my projects saved, even the simplest ones, to keep the track of my progress. Here you can find {projects.length} projects that I have developed</div>
         </div>
       </section>
       <section className='grid grid-cols-3 justify-center overflow-hidden relative'>
-        {project_groups.map(project_group => (
+        {projectGroups.map(project_group => (
           <div key={Math.random()} className='grid'>
             {project_group.map(project => (  
               <div className='project-card p-24' key={Math.random()}>

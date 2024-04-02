@@ -3,7 +3,7 @@ import ImageLoader from '../components/ImageLoader'
 
 const Contact = () => {
   return (
-    <main className="flex items-center justify-center max-w-1600 m-auto p-96 gap-40 fade-in">
+    <main className="flex md-flex-col items-center justify-between max-w-1600 m-auto p-96 gap-40 fade-in">
       <ImageLoader className='rounded-6 img-common' src="/contact.jpg" alt='contact' width={300} height={300} />
       <div>
         <h1 className='font-bold font-48 pb-40 text-gradient bg-gradient-2'>Contact me.</h1>
@@ -19,6 +19,9 @@ const Contact = () => {
           </a>
           <a target='_blank' href='https://www.linkedin.com/in/alyhxn/'>
             <Image src="/linkedin.svg" alt='linkedin' width={30} height={30} />
+          </a>
+          <a target='_blank' href='https://www.instagram.com/hassanali8812/'>
+            <Image src="/instagram.svg" alt='instagram' width={30} height={30} />
           </a>
         </div>
       </div>
