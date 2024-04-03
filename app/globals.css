@@ -57,7 +57,7 @@ input{
   border-radius: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent!important;
+  background: transparent;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -111,7 +111,7 @@ input{
 }
 .search-overlay > div{
   width: 100%;
-  height: fit-content;
+  height: 100%;
   max-width: 550px;
   backdrop-filter: blur(16px);
   border-radius: 8px;
@@ -119,13 +119,17 @@ input{
   transition: transform .1s ease, max-height .3s ease;
   overflow: hidden;
   transform: scaleY(0);
+  max-height: 420px;
 }
 .search-overlay.active > div{
   transform: scaleY(1);
 }
 .search-overlay > div > ul{
   max-height: 390px;
-  height: 100%;
+  height: fit-content;
+}
+.search-overlay > div > ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
 }
 .search-overlay .search-item{
   transition: background-color .5s ease, color .5s ease;
