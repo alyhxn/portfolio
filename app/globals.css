@@ -71,6 +71,7 @@ input{
 .img-common{
   object-fit: cover;
   aspect-ratio: 1/1;
+  max-width: calc(100vw - 48px);
 }
 .btn-unique{
   margin-left: -20px;
@@ -229,6 +230,12 @@ input{
 }
 .overflow-hidden{
   overflow: hidden;
+}
+.overflow-y-hidden{
+  overflow: hidden;
+}
+.overflow-x-scroll{
+  overflow-x: scroll;
 }
 .m-auto{
   margin: 0 auto;
