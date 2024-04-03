@@ -9,13 +9,14 @@ const ImageLoader = ({ className, src, alt, width, height }) => {
     maxWidth: width,
     height,
     overflow: 'hidden',
-    width: '100%'
+    width: '100%',
+    minWidth: 'fit-content'
   }
 
   return (
-    <div style={styles} className='relative'>
-      <Image onLoad={() => setLoaded(true)} priority className={`${className} ${loaded ? 'block' : 'hidden'}`} src={src} alt={alt} width={width} height={height}/>
-      <div style={styles} className={`${className} absolute top-0 img-overlay ${loaded && 'opacity-0'}`}></div>
+    <div style={styles} className={`relative`}>
+      <Image onLoad={() => setLoaded(true)} priority className={`${className} ${!loaded && 'opacity-0'}`} src={src} alt={alt} width={width} height={height}/>
+      <div style={styles} className={`absolute top-0 img-overlay ${loaded && 'opacity-0'}`}></div>
     </div>
   )
 }

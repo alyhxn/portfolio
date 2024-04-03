@@ -111,9 +111,8 @@ input{
 }
 .search-overlay > div{
   width: 100%;
-  height: 100%;
+  height: fit-content;
   max-width: 550px;
-  max-height: 390px;
   backdrop-filter: blur(16px);
   border-radius: 8px;
   background-color: rgb(var(--color-3) / 0.25);
@@ -123,6 +122,10 @@ input{
 }
 .search-overlay.active > div{
   transform: scaleY(1);
+}
+.search-overlay > div > ul{
+  max-height: 390px;
+  height: 100%;
 }
 .search-overlay .search-item{
   transition: background-color .5s ease, color .5s ease;
@@ -237,8 +240,15 @@ input{
 .overflow-x-scroll{
   overflow-x: scroll;
 }
+.overflow-y-scroll{
+  overflow-y: scroll;
+}
 .m-auto{
   margin: 0 auto;
+}
+.mx-20{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .p-8{
   padding: 8px;
