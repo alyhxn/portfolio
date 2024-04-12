@@ -43,14 +43,14 @@ const Projects = () => {
         {projectGroups.map(project_group => (
           <div key={Math.random()} className='grid'>
             {project_group.map(project => (  
-              <div className='project-card p-24' key={Math.random()}>
+              <div className='project-card color-2 p-24' key={Math.random()}>
                 <div className='flex justify-between pb-8'>
                   <h2 className='font-20'>{project.title}</h2>
                   <a target='_blank' href={project.link}>
                     <Image src="/outlink.svg" alt='outlink' width={20} height={20} />
                   </a>
                 </div>
-                <div className='color-1 pb-16'>{project.desc}</div>
+                <div className='pb-16'>{project.desc}</div>
                 <div className='flex gap-10'>
                   {project.techs.map(tech => (
                     <Image key={tech} className='opacity-30 hover:opacity-100 cursor-pointer' src={`/${tech}.svg`} title={tech} alt={tech} width={20} height={20} />

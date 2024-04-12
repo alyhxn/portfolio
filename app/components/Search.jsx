@@ -22,7 +22,7 @@ const result = [
     group_name: 'Follow me',
     items: [
       {title: 'Linkedin', link: 'https://www.linkedin.com/in/alyhxn/', icon: '/linkedin.svg', target: '_blank'},
-      {title: 'Github', link: '/https://github.com/alyhxn', icon: '/github.svg', target: '_blank'},
+      {title: 'Github', link: 'https://github.com/alyhxn', icon: '/github.svg', target: '_blank'},
       {title: 'Facebook', link: 'https://www.facebook.com/alihassan8812/', icon: '/facebook.svg', target: '_blank'},
       {title: 'Instagram', link: 'https://www.instagram.com/hassanali8812/', icon: '/instagram.svg', target: '_blank'}
     ]
@@ -155,9 +155,9 @@ const Search = () => {
   return (
     <section className={`search-overlay fixed flex justify-center w-screen h-screen top-0 left-0 color-2 ${activeSearch && 'active'}`}>
       <div className='mx-20' tabIndex={1} onBlur={handleBur}>
-        <input ref={searchRef} autoFocus value={query} onChange={handleInputChange} onKeyDown={handleKeyPress} className='w-full px-15 py-8 bg-transparent' placeholder='Type in a command or search...'></input>
+        <input ref={searchRef} autoFocus value={query} onChange={handleInputChange} onKeyDown={handleKeyPress} className='w-full px-15 py-8 bg-transparent border-bottom-1' placeholder='Type in a command or search...'></input>
         <ul className='overflow-y-scroll'> {filteredResult.map((group, index) => (
-          <li className=' border-top-1' key={group.group_name}>
+          <li className='border-bottom-1' key={group.group_name}>
             <p className='font-10 uppercase px-15 py-8 color-3'>{group.group_name}</p>
             <ul ref={index === 0 ? listRef : null}>
               {group.items.map(item => (
