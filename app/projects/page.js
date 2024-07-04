@@ -5,12 +5,12 @@ import ImageLoader from '../components/ImageLoader'
 
 const Projects = () => {
   const projects = [
-    {title: 'Dat Ecosystem', desc: 'Figma to standard.js project in which I vanilla javascript and css to dynamically develop the frontend', link:'https://dat-ecosystem.org/', techs : ['html', 'css', 'js'] },
-    {title: 'Rolling Ball', desc: 'Fun project in which I used three.js to code a HD 3D game', link:'https://alyhxn.github.io/runner/',  techs : ['html', 'css', 'js', 'threejs'] },
-    {title: '3D Path Planning', desc: 'Developed a new path planning algorithm after 6 months of research and testing', link:'https://alyhxn.github.io/3D-Path-Planning/',  techs : ['html', 'css', 'js', 'threejs'] },
-    {title: 'X-Recruiter', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://x-recruiter.vercel.app/',  techs : ['html', 'css', 'js'] },
-    {title: 'Venturize Production', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://venturize-production.netlify.app/',  techs : ['html', 'css', 'js'] },
-    {title: 'Colloquium Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : ['html', 'css', 'js', 'react']},
+    {title: 'Dat Ecosystem', desc: 'Figma to standard.JS project in which I vanilla javascript and CSS to dynamically develop the frontend', link:'https://dat-ecosystem.org/', techs : ['HTML', 'CSS', 'JS'] },
+    {title: 'Rolling Ball', desc: 'Fun project in which I used three.JS to code a HD 3D game', link:'https://alyhxn.github.io/runner/',  techs : ['HTML', 'CSS', 'JS', 'threeJS'] },
+    {title: '3D Path Planning', desc: 'Developed a new path planning algorithm after 6 months of research and testing', link:'https://alyhxn.github.io/3D-Path-Planning/',  techs : ['HTML', 'CSS', 'JS', 'threeJS'] },
+    {title: 'X-Recruiter', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://x-recruiter.vercel.app/',  techs : ['HTML', 'CSS', 'JS'] },
+    {title: 'Venturize Production', desc: 'Figma to HTML, CSS & Javascript freelance project. It consist of multiple modals on different pages and is fully mobile responsive.', link:'https://venturize-production.netlify.app/',  techs : ['HTML', 'CSS', 'JS'] },
+    {title: 'Colloquium Landing Page', link:'https://colloquium-mu.vercel.app/', desc: 'Figma to React freelance project in which I used React and custom CSS to develop the landing page', techs : ['HTML', 'CSS', 'JS', 'react']},
   ]
   const [projectGroups, setProjectGroups] = useState([])
   useEffect(() => {

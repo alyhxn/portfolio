@@ -13,7 +13,7 @@ const Navbar = () => {
   const current_page = usePathname();
   const pages = ['PROJECTS', 'CONTACT', 'ABOUT'];
   return (
-    <header className='flex flex-wrap py-20 px-15 justify-around items-center fade-in gap-10'>
+    <header className='flex flex-wrap py-20 px-15 justify-around items-center fade-in gap-10 sticky top-0 '>
       <Link className='font-20 font-bold' href='/'>alihxn</Link>
       <ul className={`${inter.className} flex font-11 font-bold letter-spacing-2 py-8 sm-order-1 gap-20 overflow-x-scroll overflow-y-hidden`}>
         {pages.map(page => (
