@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Search from './components/Search'
 import { ContextProvider } from './ContextProvider'
 import Footer from './components/Footer'
+import { Toaster } from 'sonner' 
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <Search />
           {children}
           <Footer />
+          <Toaster richColors />
         </ContextProvider>
       </body>
     </html>

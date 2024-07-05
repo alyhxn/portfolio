@@ -100,7 +100,7 @@ const About = () => {
       </section>
 
       <section className='flex md-flex-col-rev m-auto justify-between gap-40 color-4'>
-        <div className='bg-color-2 p-16 min-w-300 rounded-6 m-auto'>
+        <div className='bg-color-4 p-16 min-w-300 rounded-6 m-auto'>
           <h1 className='py-12'>
             Skills
           </h1>
@@ -119,7 +119,7 @@ const About = () => {
             ))}
           </ul>
         </div>
-        <div className='bg-color-2 p-16 rounded-6'>
+        <div className='bg-color-4 p-16 rounded-6'>
           <h1 className='py-12'>
             Experience
           </h1>

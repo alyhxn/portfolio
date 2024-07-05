@@ -55,9 +55,11 @@ button {
 ul{
   list-style: none;
 }
-input{
+input, textarea{
   outline: none;
   border: none;
+  resize: vertical;
+  background-color: var(--bg-color-1);
   font-family: var(--font-family-1);
 }
 ::-webkit-scrollbar {
@@ -67,6 +69,10 @@ input{
 ::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 5px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -283,11 +289,18 @@ input{
   margin-top: 8px;
   margin-bottom: 8px;
 }
+.my-80{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 .mb-8{
   margin-bottom: 8px;
 }
 .mb-12{
   margin-bottom: 12px;
+}
+.mb-80{
+  margin-bottom: 80px;
 }
 .mr-4{
   margin-right: 4px;
@@ -408,6 +421,9 @@ input{
 }
 .h-screen{
   height: 100vh;
+}
+.min-h-200{
+  min-height: 200px;
 }
 .top-0{
   top: 0;
