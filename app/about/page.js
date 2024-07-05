@@ -100,7 +100,7 @@ const About = () => {
       </section>
 
       <section className='flex md-flex-col-rev m-auto justify-between gap-40 color-4'>
-        <div className='bg-color-4 p-16 min-w-300 rounded-6 m-auto'>
+        <div className='bg-color-4 p-16 min-w-300 rounded-6 m-auto h-fit'>
           <h1 className='py-12'>
             Skills
           </h1>

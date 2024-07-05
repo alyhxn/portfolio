@@ -36,7 +36,7 @@ const Contact = () => {
       toast.error(result.message)
   };
   return (
-    <main className='fade-in m-auto my-80'>
+    <main className='fade-in m-auto my-80 px-30'>
       <section className="flex md-flex-col items-center justify-center max-w-1600 gap-40 mb-80">
         <ImageLoader className='rounded-6 img-common' src="/contact.jpg" alt='contact' width={300} height={300} />
         <div>

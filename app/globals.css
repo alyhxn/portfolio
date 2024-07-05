@@ -335,6 +335,10 @@ input, textarea{
   padding-left: 20px;
   padding-right: 20px;
 }
+.px-30{
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .px-40{
   padding-left: 40px;
   padding-right: 40px;
@@ -421,6 +425,9 @@ input, textarea{
 }
 .h-screen{
   height: 100vh;
+}
+.h-fit{
+  height: fit-content;
 }
 .min-h-200{
   min-height: 200px;
