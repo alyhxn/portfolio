@@ -14,7 +14,7 @@ export default function Home() {
       <div>
         <h1 className='font-bold font-48 pb-40 text-gradient bg-gradient-1'>Ali Hassan</h1>
         <div className='line-height-2'>Software Engineer</div>
-        <div className='color-2 line-height-2'>I am a self-taught frontend web developer with a keen interest in AI. My knowledge in frontend development has been acquired through online courses, blog readings, and hands-on application to various projects during my free time. I have delved into the intricacies of the frontend development process, grasped essential concepts, and explored theoretical foundations. Additionally, my enthusiasm for the AI revolution fuels my passion for staying informed and engaged in this dynamic field.</div>
+        <div className='color-2 line-height-2'>I am a frontend web developer with a BS in Computer Science and a keen interest in AI. My knowledge in frontend development has been acquired through online courses, blog readings, and hands-on application to various projects during my free time. I have delved into the intricacies of the frontend development process, grasped essential concepts, and explored theoretical foundations. Additionally, my enthusiasm for the AI revolution fuels my passion for staying informed and engaged in this dynamic field. </div>
         <div className='flex sm-flex-col items-center pt-24 gap-4 font-14'>
           <button onClick={() => setActiveSearch(true)} className='flex items-center btn-unique btn-hover px-20 py-8 gap-4 rounded-6 cursor-pointer transition-colors duration-200'>
             Press <span className='font-mono bg-color-3 color-rev-1 px-4 rounded-4'>ctrl</span> <span className='font-mono bg-color-3 color-rev-1 px-4 rounded-4'>K</span> to start 

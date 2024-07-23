@@ -17,7 +17,7 @@ const Navbar = () => {
       <Link className='font-20 font-bold' href='/'>alihxn</Link>
       <ul className={`${inter.className} flex font-11 font-bold letter-spacing-2 py-8 sm-order-1 gap-20 overflow-x-scroll overflow-y-hidden`}>
         {pages.map(page => (
-          <li key={page} className={current_page.includes(page.toLowerCase()) ? 'color-1' : 'color-3'}>
+          <li key={page} className={current_page.includes(page.toLowerCase()) ? 'color-1' : 'color-2'}>
             <Link className='px-20 py-8 btn-hover rounded-6 cursor-pointer' href={`/${page.toLowerCase()}`}>{page}</Link>
           </li>
         ))}
